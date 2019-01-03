@@ -2,10 +2,9 @@
 
 install_neovim() {
     if which nvim > /dev/null; then
-        echo "===> Neovim already installed."
+        echo "${BLUE}${BACKGROUND}===> Neovim already installed.${RESET}"
     else
-        echo "---> Installing neovim........."
-        echo -ne "---> Installing ===>"
+        echo -ne "${BLUE}---> Installing neovim ===>"
         sudo apt-get install software-properties-common &> /dev/null
         echo -ne \\b"=====>"
         sudo add-apt-repository --remove -y ppa:neovim-ppa/unstable &> /dev/null
@@ -17,7 +16,8 @@ install_neovim() {
         sudo apt-get update &> /dev/null
         echo -ne \\b"============>"
         sudo apt-get install -y neovim &>> /dev/null
-        echo -ne \\b"==============>"
-        echo
+        echo -e \\b"==============>${RESET}"
+        echo "${GREEN}${BACKGROUND} Successfully install neovim.${RESET}"
     fi
+    echo
 }
