@@ -8,6 +8,7 @@ BACKGROUND=`tput setab 7`
 
 source ./recipes/neovim.sh
 source ./recipes/pynvim.sh
+source ./recipes/fonts.sh
 
 install() {
     if ! which pip > /dev/null && ! which pip3 >/dev/null; then
@@ -16,6 +17,7 @@ install() {
     fi
     install_neovim
     install_pynvim
+    install_fonts
 }
 
 install
