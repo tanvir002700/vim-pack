@@ -9,6 +9,7 @@ BACKGROUND=`tput setab 7`
 source ./recipes/neovim.sh
 source ./recipes/pynvim.sh
 source ./recipes/fonts.sh
+source ./recipes/vim-plug.sh
 
 install() {
     if ! which pip > /dev/null && ! which pip3 >/dev/null; then
@@ -18,6 +19,7 @@ install() {
     install_neovim
     install_pynvim
     install_fonts
+    install_vim_plug
 }
 
 install
