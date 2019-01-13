@@ -19,4 +19,5 @@ install_vim_plug() {
         echo -e \\b"==============>${RESET}"
         echo "${GREEN}${BACKGROUND} Successfully install Vim Plug.${RESET}"
     fi
+    echo
 }
