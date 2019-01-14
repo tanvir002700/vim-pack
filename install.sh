@@ -12,6 +12,7 @@ source ./recipes/fonts.sh
 source ./recipes/vim-plug.sh
 source ./recipes/ctags.sh
 source ./recipes/ag.sh
+source ./recipes/plugins.sh
 
 install() {
     if ! which pip > /dev/null && ! which pip3 >/dev/null; then
@@ -24,6 +25,7 @@ install() {
     install_vim_plug
     install_ctags
     install_ag
+    install_plugins
 }
 
 install
