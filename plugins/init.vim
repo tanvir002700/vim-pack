@@ -11,7 +11,13 @@ call system('true')
 source ~/.config/nvim/plugins.vim
 
 syntax enable
-colorscheme solarized8
+
+try
+    colorscheme solarized8
+catch /^Vim\%((\a\+)\)\=:E185/
+    " no color scheme
+endtry
+
 set background=dark
 hi Normal guibg=NONE ctermbg=NONE
 
