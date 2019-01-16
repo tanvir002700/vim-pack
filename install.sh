@@ -7,14 +7,16 @@ RESET=`tput sgr0`
 BACKGROUND=`tput setab 7`
 
 CURRENT_DIR=$(dirname "$0")
+echo "vim dir"
+echo $CURRENT_DIR
 
-source $CURRENT_DIR/recipes/neovim.sh
-source $CURRENT_DIR/recipes/pynvim.sh
-source $CURRENT_DIR/recipes/fonts.sh
-source $CURRENT_DIR/recipes/vim-plug.sh
-source $CURRENT_DIR/recipes/ctags.sh
-source $CURRENT_DIR/recipes/ag.sh
-source $CURRENT_DIR/recipes/plugins.sh
+source "$CURRENT_DIR/recipes/neovim.sh"
+source "$CURRENT_DIR/recipes/pynvim.sh"
+source "$CURRENT_DIR/recipes/fonts.sh"
+source "$CURRENT_DIR/recipes/vim-plug.sh"
+source "$CURRENT_DIR/recipes/ctags.sh"
+source "$CURRENT_DIR/recipes/ag.sh"
+source "$CURRENT_DIR/recipes/plugins.sh"
 
 install() {
     if ! which pip > /dev/null && ! which pip3 >/dev/null; then
