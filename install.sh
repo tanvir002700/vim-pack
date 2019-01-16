@@ -7,8 +7,6 @@ RESET=`tput sgr0`
 BACKGROUND=`tput setab 7`
 
 CURRENT_DIR=$(dirname "$0")
-echo "vim dir"
-echo $CURRENT_DIR
 
 source "$CURRENT_DIR/recipes/neovim.sh"
 source "$CURRENT_DIR/recipes/pynvim.sh"
