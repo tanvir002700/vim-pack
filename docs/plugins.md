@@ -1,7 +1,6 @@
 ---
-layout: page
-title: Plugins
+layout: default
 permalink: /plugins/
 ---
 
-This is plugins page.
+# Plugins

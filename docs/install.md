@@ -1,7 +1,6 @@
 ---
-layout: page
-title: Install
+layout: default
 permalink: /install/
 ---
 
-This is install page.
+# Install

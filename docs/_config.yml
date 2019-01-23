@@ -13,32 +13,34 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Vim Pack
-email: tanvir002700@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
 baseurl: "/vim-pack" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-twitter_username: tanvir002700
-github_username:  tanvir002700
-linkedin_username: tanvir002700
+
+permalink: pretty
+nav:
+  - Getting Started:
+    - Introduction: ''
+    - Install: install
+    - Plugins: plugins
+  - Usages:
+    - usages
+  - Licence:
+      - WTFPL: license
+
+
+
+owner_name:
+  - tanvir hasan
+owner_url:
+  - https://www.facebook.com/anick.silentkiller
+
 
 # Build settings
 markdown: kramdown
-theme: minima
+remote_theme: marella/jekyll-theme-documentation
 plugins:
   - jekyll-feed
-
-header_pages:
-  - index.md
-  - install.md
-  - plugins.md
-  - usages.md
-  - license.md
-  - about.md
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

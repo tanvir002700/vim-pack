@@ -1,4 +1,6 @@
 ---
-layout: home
-title: Overview
+layout: default
+permalink: /
 ---
+
+# Overview
