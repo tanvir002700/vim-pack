@@ -1,22 +1,27 @@
 call plug#begin('~/.config/nvim/plugged')
+	Plug 'lifepillar/vim-solarized8'
+	Plug 'dracula/vim'
+
+    "DevIcon
     Plug 'ryanoasis/vim-devicons'
+
+    "Asynchronous Syntastic
     Plug 'neomake/neomake'
 
+    "File Browsing
 	Plug 'tpope/vim-vinegar'
 	Plug 'ctrlpvim/ctrlp.vim'
-	Plug 'dracula/vim'
-	Plug 'lifepillar/vim-solarized8'
+	Plug 'scrooloose/nerdtree'
+    Plug 'jistr/vim-nerdtree-tabs'
+	Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 	Plug 'tpope/vim-endwise'
 	Plug 'sheerun/vim-polyglot'
 	Plug 'rking/ag.vim'
 	Plug 'skwp/greplace.vim'
 	Plug 'ervandew/supertab'
 	Plug 'ludwig/split-manpage.vim'
-
-	Plug 'scrooloose/nerdtree'
-    Plug 'jistr/vim-nerdtree-tabs'
-	Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 	Plug 'airblade/vim-gitgutter'			" check git diff
 	Plug 'ntpeters/vim-better-whitespace'   " check trailling white space error
@@ -26,6 +31,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
 
+    "" Lnaguage Support
 	" c
 	Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 
