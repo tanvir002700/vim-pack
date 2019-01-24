@@ -11,6 +11,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'rking/ag.vim'
 	Plug 'skwp/greplace.vim'
 	Plug 'ervandew/supertab'
+	Plug 'ludwig/split-manpage.vim'
 
 	Plug 'scrooloose/nerdtree'
     Plug 'jistr/vim-nerdtree-tabs'
@@ -27,7 +28,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 	" c
 	Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
-	Plug 'ludwig/split-manpage.vim'
 
 	" rails
 	Plug 'tpope/vim-rails'
@@ -36,30 +36,30 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'thoughtbot/vim-rspec'
 	Plug 'ecomba/vim-ruby-refactoring'
 
-	" html
-	"" HTML Bundle
-	Plug 'hail2u/vim-css3-syntax'
-	Plug 'gorodinskiy/vim-coloresque'
-	Plug 'tpope/vim-haml'
-	Plug 'mattn/emmet-vim'
-    Plug 'sukima/xmledit'
-
-	" javascript
-	"" Javascript Bundle
-    Plug 'jelera/vim-javascript-syntax'
-
-
 	" python
-	"" Python Bundle
     Plug 'jmcomets/vim-pony'
     Plug 'davidhalter/jedi-vim'
     Plug 'zchee/deoplete-jedi'
 
+	" html
+	Plug 'tpope/vim-haml'
+	Plug 'mattn/emmet-vim'
+    Plug 'sukima/xmledit'
+
+    " css
+    Plug 'hail2u/vim-css3-syntax'
+	Plug 'gorodinskiy/vim-coloresque'
+
+	" javascript
+    Plug 'jelera/vim-javascript-syntax'
+
+
+
     if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
+        Plug 'Shougo/deoplete.nvim'
+        Plug 'roxma/nvim-yarp'
+        Plug 'roxma/vim-hug-neovim-rpc'
     endif
 call plug#end()
