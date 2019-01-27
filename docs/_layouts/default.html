@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/app.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/asciinema-player.css" | relative_url }}">
+  </head>
+  <body>
+    {% include navbar.html %}
+
+    <div class="container-xl">
+      <div class="d-xl-none py-3">
+        {% include navigation.html %}
+        {% include toc.html %}
+      </div>
+      <div class="d-xl-flex flex-items-stretch">
+        <div class="toc-col sidebar-col d-none d-xl-block">
+          {% include toc.html open=true %}
+        </div>
+        <main class="content-col flex-item-equal min-width-0 markdown-body">
+          {{ content }}
+        </main>
+        <div class="navigation-col sidebar-col d-none d-xl-block">
+          {% include navigation.html open=true %}
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    <script src="{{ "/assets/js/app.js" | relative_url }}"></script>
+    <script>anchors.add();</script>
+    {% if site.google_analytics %}
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', '{{ site.google_analytics }}', 'auto');
+      ga('send', 'pageview');
+    </script>
+    {% endif %}
+    <script src="{{ "/assets/js/asciinema-player.js" | relative_url }}"></script>
+  </body>
+</html>
