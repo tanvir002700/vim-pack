@@ -1,12 +1,11 @@
 call plug#begin('~/.config/nvim/plugged')
+    " Theme
 	Plug 'lifepillar/vim-solarized8'
 	Plug 'dracula/vim'
-
-    "DevIcon
-    Plug 'ryanoasis/vim-devicons'
-
-    "Asynchronous Syntastic
-    Plug 'neomake/neomake'
+	Plug 'ludwig/split-manpage.vim'
+	Plug 'airblade/vim-gitgutter'			" check git diff
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 
     "File Browsing
 	Plug 'tpope/vim-vinegar'
@@ -15,21 +14,23 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'jistr/vim-nerdtree-tabs'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+    "
+    "DevIcon
+    Plug 'ryanoasis/vim-devicons'
+
+    "Asynchronous Syntastic
+    Plug 'neomake/neomake'
 
 	Plug 'tpope/vim-endwise'
-	Plug 'sheerun/vim-polyglot'
-	Plug 'rking/ag.vim'
-	Plug 'skwp/greplace.vim'
 	Plug 'ervandew/supertab'
-	Plug 'ludwig/split-manpage.vim'
-
-	Plug 'airblade/vim-gitgutter'			" check git diff
+	Plug 'sheerun/vim-polyglot'
 	Plug 'ntpeters/vim-better-whitespace'   " check trailling white space error
-	Plug 'Raimondi/delimitMate'             " automatic closing of quotes, parenthesis, brackets, etc.
 	Plug 'honza/vim-snippets'
 
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    " Search & Replace
+	Plug 'rking/ag.vim'
+	Plug 'skwp/greplace.vim'
+	Plug 'Raimondi/delimitMate'             " automatic closing of quotes, parenthesis, brackets, etc.
 
     "" Lnaguage Support
 	" c
