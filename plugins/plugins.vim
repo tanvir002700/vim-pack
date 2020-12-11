@@ -3,7 +3,6 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'lifepillar/vim-solarized8'
 	Plug 'dracula/vim'
 	Plug 'ludwig/split-manpage.vim'
-	Plug 'airblade/vim-gitgutter'			" check git diff
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
 
@@ -12,7 +11,10 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'scrooloose/nerdtree'
     Plug 'jistr/vim-nerdtree-tabs'
+	Plug 'airblade/vim-gitgutter'			" check git diff
 	Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'rhysd/git-messenger.vim'
+    Plug 'apzelos/blamer.nvim'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     "
     "DevIcon
@@ -59,6 +61,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 	" javascript
     Plug 'jelera/vim-javascript-syntax'
+    Plug 'pangloss/vim-javascript'
 
 
 
