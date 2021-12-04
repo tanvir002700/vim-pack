@@ -1,0 +1,8 @@
+vim.api.nvim_set_keymap('i', 'jk', '<esc>', {})
+vim.api.nvim_set_keymap('n', '<Leader><Space>', ':nohlsearch<cr>', {})
+vim.api.nvim_set_keymap('n', '<C-J>', '<C-W><C-J>', {})
+vim.api.nvim_set_keymap('n', '<C-K>', '<C-W><C-K>', {})
+vim.api.nvim_set_keymap('n', '<C-H>', '<C-W><C-H>', {})
+vim.api.nvim_set_keymap('n', '<C-L>', '<C-W><C-L>', {})
+vim.api.nvim_set_keymap('n', '<Leader>bd', ':Bclose<CR>', {noremap=true, silent=true})
+vim.api.nvim_set_keymap('n', '<Leader>bD', ':Bclose!<CR>', {noremap=true, silent=true})

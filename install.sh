@@ -9,12 +9,10 @@ BACKGROUND=`tput setab 7`
 CURRENT_DIR=$(dirname "$0")
 
 source "$CURRENT_DIR/recipes/neovim.sh"
-source "$CURRENT_DIR/recipes/pynvim.sh"
 source "$CURRENT_DIR/recipes/fonts.sh"
-source "$CURRENT_DIR/recipes/vim-plug.sh"
 source "$CURRENT_DIR/recipes/ctags.sh"
 source "$CURRENT_DIR/recipes/ag.sh"
-source "$CURRENT_DIR/recipes/plugins.sh"
+source "$CURRENT_DIR/recipes/configs.sh"
 
 install() {
     if ! which pip > /dev/null && ! which pip3 >/dev/null; then
@@ -22,12 +20,9 @@ install() {
         return
     fi
     install_neovim
-    install_pynvim
     install_fonts
-    install_vim_plug
     install_ctags
     install_ag
-    install_plugins
 }
 
 install

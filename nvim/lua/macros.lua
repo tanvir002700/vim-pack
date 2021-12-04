@@ -1,0 +1,4 @@
+vim.cmd [[
+  let @d = 'oimport ipdb; ipdb.set_trace()jk'
+]]
+
