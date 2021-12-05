@@ -35,6 +35,7 @@ vim.opt.encoding = 'UTF-8'
 
 
 require('plugins')
+require('keybindings')
 
 vim.cmd [[
     command Bd bp|vsp|bn|bd
