@@ -8,12 +8,11 @@ permalink: /install/
 ## Dependencies
 ### List
 - git
-- python
-- pip
-- pip3
+- node
+- npm
 
 ### Install Dependencies
-    $sudo apt-get install python-pip python3-pip
+    $sudo apt-get install node npm
 
 ## Install vim-pack
 
