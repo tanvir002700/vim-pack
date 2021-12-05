@@ -60,7 +60,7 @@ require('packer').startup(function()
     {'neovim/nvim-lspconfig'},
     {'williamboman/nvim-lsp-installer', config = [[require('config.lsp-config')]]},
     {'glepnir/lspsaga.nvim', config = [[require('config.lsp-saga')]]},
-    {'folke/lsp-colors.nvim', config = [[require('config.lsp-color')]]}
+    {'folke/lsp-colors.nvim', config = [[require('config.lsp-color')]]},
   }
 
   use {
@@ -73,7 +73,6 @@ require('packer').startup(function()
       {'hrsh7th/cmp-path', after = 'nvim-cmp'},
       { 'hrsh7th/cmp-nvim-lua', after = 'nvim-cmp' },
       { 'saadparwaiz1/cmp_luasnip', after = 'nvim-cmp' },
-      {'nvim-lua/popup.nvim'},
       {'onsails/lspkind-nvim', config=[[require('config.lsp-kind')]]}
     },
     config = [[require('config.cmp')]],
@@ -86,6 +85,7 @@ require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} },
     config = [[require('config.telescope')]]
   }
+
 
   if packer_bootstrap then
       require('packer').sync()

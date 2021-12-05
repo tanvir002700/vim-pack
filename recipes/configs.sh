@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-install_plugins() {
+install_configs() {
     echo -ne "${BLUE}---> Installing Configs ===>"
     CURRENT_DIR=$(dirname "$0")
 

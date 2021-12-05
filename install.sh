@@ -23,6 +23,7 @@ install() {
     install_fonts
     install_ctags
     install_ag
+    install_configs
 }
 
 install
