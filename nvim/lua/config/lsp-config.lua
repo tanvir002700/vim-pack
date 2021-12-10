@@ -1,6 +1,7 @@
 local status, lsp_installer = pcall(require, "nvim-lsp-installer")
 if (not status) then return end
 
+local util = require 'lspconfig/util'
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -39,6 +40,9 @@ lsp_installer.on_server_ready(function(server)
         debounce_text_changes = 150,
       }
     }
+    if server.name == "kotlin_language_server" then
+        opts.root_dir = util.root_pattern("settings.gradle", ".git")
+    end
 
     server:setup(opts)
 end)
