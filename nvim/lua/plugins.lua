@@ -24,21 +24,9 @@ require('packer').startup(function()
   }
 
   use {
-    {
-      'scrooloose/nerdtree',
-      config = [[require('config.nerdtree')]]
-    },
-    {'jistr/vim-nerdtree-tabs'},
-    {'Xuyuanp/nerdtree-git-plugin'},
-    {
-      'tiagofumo/vim-nerdtree-syntax-highlight',
-      requires = {
-        {
-          'kyazdani42/nvim-web-devicons',
-          config = [[require('config.devicons')]]
-        }
-      }
-    }
+    'kyazdani42/nvim-tree.lua',
+    requires = {'kyazdani42/nvim-web-devicons'},
+    config = [[require('config.nvim-tree')]]
   }
 
   use {'tpope/vim-vinegar'}

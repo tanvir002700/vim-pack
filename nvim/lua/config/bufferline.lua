@@ -6,7 +6,7 @@ require("bufferline").setup{
     indicator_icon = '',
     offsets = {
         {
-            filetype = "NERDTree",
+            filetype = 'NvimTree',
             text = "File Explorer",
             highlight = "Directory",
             text_align = "left"
