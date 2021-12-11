@@ -17,6 +17,11 @@ require('packer').startup(function()
     requires = {'kyazdani42/nvim-web-devicons', opt = true},
     config = [[require('config.lualine')]]
   }
+  use {
+    'akinsho/bufferline.nvim',
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = [[require('config.bufferline')]]
+  }
 
   use {
     {
@@ -36,7 +41,6 @@ require('packer').startup(function()
     }
   }
 
-  use{'ervandew/supertab'}
   use {'tpope/vim-vinegar'}
   use {'ctrlpvim/ctrlp.vim', config = [[require('config.ctrlp')]]}
   use {'neomake/neomake', config = [[require('config.neomake')]]}
