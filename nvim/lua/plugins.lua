@@ -10,8 +10,12 @@ require('packer').startup(function()
   use {'ludwig/split-manpage.vim'}
 
   use {
-    {'lifepillar/vim-solarized8', config = [[require('config.theme')]]},
-    {'vim-airline/vim-airline', requires = {{'vim-airline/vim-airline-themes'}}, config = [[require('config.airline')]]},
+    'lifepillar/vim-solarized8', config = [[require('config.theme')]]
+  }
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true},
+    config = [[require('config.lualine')]]
   }
 
   use {
