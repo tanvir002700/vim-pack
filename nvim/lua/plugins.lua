@@ -29,7 +29,6 @@ require('packer').startup(function()
     config = [[require('config.nvim-tree')]]
   }
 
-  use {'tpope/vim-vinegar'}
   use {'ctrlpvim/ctrlp.vim', config = [[require('config.ctrlp')]]}
   use {'neomake/neomake', config = [[require('config.neomake')]]}
 
