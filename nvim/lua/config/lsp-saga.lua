@@ -1,7 +1,18 @@
 local status, saga = pcall(require, "lspsaga")
 if (not status) then return end
 
-saga.init_lsp_saga()
+saga.init_lsp_saga{
+    error_sign = '',
+    warn_sign = '',
+    hint_sign = '',
+    infor_sign = '',
+    code_action_prompt = {
+        enable = false,
+        sign = true,
+        sign_priority = 20,
+        virtual_text = true,
+    },
+}
 
 vim.api.nvim_set_keymap('n', 'sf', ':Lspsaga lsp_finder<CR>', {noremap=true, silent=true})
 vim.api.nvim_set_keymap('n', 'sp', ':Lspsaga preview_definition<CR>', {noremap=true, silent=true})

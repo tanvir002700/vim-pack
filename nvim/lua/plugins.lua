@@ -9,6 +9,17 @@ vim.cmd [[packadd packer.nvim]]
 require('packer').startup(function()
   use {'ludwig/split-manpage.vim'}
 
+    use {
+    "folke/which-key.nvim",
+    config = function()
+        require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+        }
+    end
+    }
+
   use {
     'lifepillar/vim-solarized8', config = [[require('config.theme')]]
   }
@@ -50,6 +61,7 @@ require('packer').startup(function()
         'nvim-treesitter/nvim-treesitter-textobjects',
       },
       run = ':TSUpdate',
+      config = [[require('config.nvim-treesitter')]]
     }
   use {
     {'neovim/nvim-lspconfig'},

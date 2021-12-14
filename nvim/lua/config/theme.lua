@@ -1,8 +1,6 @@
-if vim.env.TERM_PROGRAM == 'tmux' or vim.fn.has('macunix') ~= 1 then
-  vim.cmd[[
-    set termguicolors
-  ]]
-end
+vim.cmd[[
+  set termguicolors
+]]
 vim.g.background = 'dark'
 vim.cmd("colorscheme solarized8")
 
