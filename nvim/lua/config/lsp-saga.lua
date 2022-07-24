@@ -30,8 +30,6 @@ saga.init_lsp_saga({
         sign_priority = 20,
         virtual_text = true,
     },
-    -- separator in finder
-    finder_separator = "  ",
     -- preview lines of lsp_finder and definition preview
     max_preview_lines = 10,
     finder_action_keys = {
@@ -49,10 +47,6 @@ saga.init_lsp_saga({
     },
     rename_action_quit = "<C-c>",
     definition_preview_icon = "  ",
-    -- show symbols in winbar must nightly
-    symbol_in_winbar = false,
-    winbar_separator = '>',
-    winbar_show_file = true,
     -- if you don't use nvim-lspconfig you must pass your server name and
     -- the related filetypes into this table
     -- like server_filetype_map = { metals = { "sbt", "scala" } }
