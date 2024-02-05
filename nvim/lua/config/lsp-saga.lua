@@ -1,7 +1,7 @@
 local status, saga = pcall(require, "lspsaga")
 if (not status) then return end
 
-saga.init_lsp_saga({
+saga.setup({
     -- "single" | "double" | "rounded" | "bold" | "plus"
     border_style = "single",
     -- when cursor in saga window you config these to move

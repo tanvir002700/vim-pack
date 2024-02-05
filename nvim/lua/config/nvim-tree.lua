@@ -1,10 +1,28 @@
-local tree_cb = require'nvim-tree.config'.nvim_tree_callback
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- optionally enable 24-bit colour
+vim.opt.termguicolors = true
+
+local function my_on_attach(bufnr)
+  local api = require "nvim-tree.api"
+
+  local function opts(desc)
+    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
+  -- default mappings
+  api.config.mappings.default_on_attach(bufnr)
+
+  -- custom mappings
+  vim.keymap.set('n', 's',     api.node.open.vertical,                  opts('Help'))
+end
 
 require'nvim-tree'.setup {
+  on_attach = my_on_attach,
   disable_netrw       = true,
   hijack_netrw        = true,
-  open_on_setup       = false,
-  ignore_ft_on_setup  = {},
   open_on_tab         = false,
   hijack_cursor       = false,
   update_cwd          = false,
@@ -41,15 +59,7 @@ require'nvim-tree'.setup {
   },
   view = {
       width = 30,
-      height = 30,
-      hide_root_folder = false,
       side = 'left',
-      mappings = {
-        custom_only = false,
-        list = {
-          { key = "s", cb = tree_cb("vsplit"), mode = "n" },
-        }
-      },
       number = false,
       relativenumber = false,
       signcolumn = "yes"
